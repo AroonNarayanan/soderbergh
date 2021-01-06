@@ -4,14 +4,14 @@ export interface IEntry extends Document {
     title: string,
     year: number,
     type: string,
-    date: Date
+    dateWatched: Date
 }
 
 const EntrySchema: Schema = new Schema({
     title: String,
     year: Number,
     type: String,
-    date: Date
+    dateWatched: Date
 }, {timestamps: true});
 
 const Entry = mongoose.model<IEntry>('Entry', EntrySchema)
